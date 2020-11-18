@@ -1,68 +1,102 @@
-
 const booleanStatusChecker = (booleanValue, onSuccess, onError) => {
-if (booleanValue === true) {
-    let response = onSuccess(booleanValue);
-    console.log(response);
-    console.log("boolean = true");
+if(booleanValue === true) {
+  let SuccessResponse =  onSuccess(booleanValue);
+  console.log(SuccessResponse);
 } else {
-    let response = onError(booleanValue);
-    console.log(response);
-    console.log("boolean = false");
+  let errorResponse = onError(booleanValue);
+  console.log(errorResponse);
 }
+
 };
 
-const onSuccess = (callbackIsBooleanValue) => {
-    return `Success! The boolean value is ${callbackIsBooleanValue}`;
+const onSuccess = (thisIsTheBooleanValue) => {
+    return `Success! The boolean value is ${thisIsTheBooleanValue}`;
 };
 
-const onError = (callbackIsBooleanValue) => {
-    return `Error! The boolean value is ${callbackIsBooleanValue}`;
+const onError = (thisIsTheBooleanValue) => {
+    return `Error! The boolean value is ${thisIsTheBooleanValue}`;
 };
 
-booleanStatusChecker(false, onSuccess, onError);
+booleanStatusChecker(true, onSuccess, onError);
 
-// let booleanStatusCheckerValue = booleanStatusChecker();
+let newBooleanStatusChecker = booleanStatusChecker(false, onSuccess, onError);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const booleanStatusChecker = (booleanValue, onSuccess, onError) => {
+// if (booleanValue === true) {
+//     let response = onSuccess(booleanValue);
+//     console.log(response);
+//     console.log("boolean = true");
+// } else {
+//     let response = onError(booleanValue);
+//     console.log(response);
+//     console.log("boolean = false");
+// }
+// };
+
+// const onSuccess = (callbackIsBooleanValue) => {
+//     return `Success! The boolean value is ${callbackIsBooleanValue}`;
+// };
+
+// const onError = (callbackIsBooleanValue) => {
+//     return `Error! The boolean value is ${callbackIsBooleanValue}`;
+// };
+
+// booleanStatusChecker(false, onSuccess, onError);
+
+// // let booleanStatusCheckerValue = booleanStatusChecker();
+// // console.log(booleanStatusCheckerValue);
+
+
+// let booleanStatusCheckerValue = booleanStatusChecker(true,onSuccess,onError);
 // console.log(booleanStatusCheckerValue);
-
-
-let booleanStatusCheckerValue = booleanStatusChecker(true,onSuccess,onError);
-console.log(booleanStatusCheckerValue);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -85,7 +119,7 @@ console.log(booleanStatusCheckerValue);
 
 // const onSuccess = (bvalue) => {
 //     return `The boolean value is ${bvalue}`;
-   
+
 // };
 
 // const onError = (bvalue) => { 
